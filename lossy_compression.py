@@ -215,7 +215,7 @@ def calculate_bpc(compressed_size_bits: float, text: str) -> float:
 
 # Fitness function 
 def calculate_fitness(individual, original_chunk, original_compressed_size, model, tokenizer):
-    """Calculate fitness based on supervisor's formula: fitness(s') = (LLMZip(s) - LLMZip(s'))/LLMZip(s) if sim(s,s')>=theta else 0"""
+    """Calculate fitness based on formula: fitness(s') = (LLMZip(s) - LLMZip(s'))/LLMZip(s) if sim(s,s')>=theta else 0"""
     # Convert individual to text
     individual_text = tokenizer.decode(individual.tensor)
     
